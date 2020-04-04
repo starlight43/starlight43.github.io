@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spook Your Friends with Electron</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://cdn.glitch.com/cac749b9-a651-4b28-900e-eab82ca322d7/squiddo.png?1551146813375">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- general seo -->
+    <meta name="description" content="Here’s a fun talk I gave at BrooklynJS October 2018 about simple pranks you can pull off with Electron.js, a javascript package that lets you run webpages as cross-platform desktop apps! ⚡️👻⚡️">
+
+    <!-- zuckerberg card -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Spook Your Friends with Electron">
+    <meta property="og:description" content="Here’s a fun talk I gave at BrooklynJS October 2018 about simple pranks you can pull off with Electron.js, a javascript package that lets you run webpages as cross-platform desktop apps! ⚡️👻⚡️">
+    <meta property="og:url" content="https://melody.dev/spooky-electron/">
+    
+    <meta property="og:image" content="https://melody.dev/spooky-electron/meta-preview.png">
+    
+    <meta property="og:article:author" content="Rashmika Kolleri">
+    <meta property="og:article:published_time" content="2018-10-31 00:00:00 +0530">
+    
+
+    <!-- @jack card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pixelyunicorn">
+    <meta name="twitter:creator" content="@pixelyunicorn">
+    <meta name="twitter:title" content="Spook Your Friends with Electron">
+    <meta name="twitter:description" content="Here’s a fun talk I gave at BrooklynJS October 2018 about simple pranks you can pull off with Electron.js, a javascript package that lets you run webpages as cross-platform desktop apps! ⚡️👻⚡️">
+    
+    <meta name="twitter:image:src" content="https://melody.dev/spooky-electron/meta-preview.png">
+    <meta name="twitter:image:alt" content="Spook Your Friends with Electron">
+    
+  </head>
+  <body class="page-spooky-electron accent-teal ">
+    <span id="top"></span>
+<nav>
+  <container>
+    <a href="/" class="button duo"><svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="purse-fill" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="22" height="22" title="purse-fill"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M16 11.5c-.711 0-1.377.007-2 .024-8.208.213-9 1.935-9 7.976s.792 7.764 9 7.976c.623.017 1.289.024 2 .024 10.083 0 11-1.5 11-8s-.917-8-11-8zm-.018 5.88c1.299-1.28 2.597-.96 3.247-.32 2.597 2.56-2.45 5.94-3.247 5.94-.796 0-5.843-3.38-3.246-5.94.65-.64 1.948-.96 3.246.32z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5a5 5 0 0 0-5 5v2a1 1 0 1 0 2 0v-2a3 3 0 0 1 6 0v2a1 1 0 1 0 2 0v-2a5 5 0 0 0-5-5z"></path></g></svg> Rashmika</a>
+  </container>
+</nav>
+
+<header class="bg-teal ">
+    <span id="top"></span>
+    
+    <div class="feature hidden-tablet">
+      <img src="/spooky-electron/feature.png" role="presentation"/>
+      <tiles style="
+          grid-template-columns: repeat(16, 1fr);
+          grid-template-rows: repeat(10, 1fr);
+          ">
+        <tile style="
+          grid-column: 6 / span 6;
+          grid-row: 3 / span 6;
+        ">
+          <h1>Spook Your Friends with Electron</h1>
+        </tile>
+      </tiles>
+      <p class="metadata feature-above">
+        
+        Published October 31, 2018 •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  10 mins
+</span>
+ read
+      </p>
+    </div>
+    <div class="visible-tablet">
+      <br class="hidden-phone">
+      <h1>Spook Your Friends with Electron</h1>
+      <p class="metadata">
+        
+        Published October 31, 2018 •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  10 mins
+</span>
+ read
+      </p>
+      <img src="/spooky-electron/feature.png" alt="Spook Your Friends with Electron"/>
+    </div>
+    
+</header>
+<section id="main">
+  <span class="toggle-themes hidden-phone hidden-tablet">
+  <a onClick="toggle_theme('dark')" class="button uno toggle-theme-dark"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14.75 2.15c0-.63.56-1.15 1.25-1.15.7 0 1.25.52 1.25 1.15v2.31c0 .64-.56 1.16-1.25 1.16s-1.25-.52-1.25-1.16v-2.3zM7.4 5.28a1.33 1.33 0 0 0-1.77 0 1.1 1.1 0 0 0 0 1.63L7.4 8.54c.5.45 1.28.45 1.77 0a1.1 1.1 0 0 0 0-1.63L7.4 5.28zm13.94 15.1c-.88.86-1.59 1.93-1.59 3.12 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.43-.26c.35-.22.56-.58.56-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14zM26.67 5.28a1.33 1.33 0 0 0-1.77 0L23.14 6.9a1.1 1.1 0 0 0 0 1.63c.48.45 1.27.45 1.76 0l1.77-1.63a1.1 1.1 0 0 0 0-1.63zm3.08 8.41c.69 0 1.25.52 1.25 1.16 0 .63-.56 1.15-1.25 1.15h-2.5c-.69 0-1.25-.52-1.25-1.15 0-.64.56-1.16 1.25-1.16h2.5zM6 14.85c0-.64-.56-1.16-1.25-1.16h-2.5c-.69 0-1.25.52-1.25 1.16 0 .63.56 1.15 1.25 1.15h2.5C5.44 16 6 15.48 6 14.85z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <a onClick="toggle_theme('light')" class="button uno toggle-theme-light"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg" aria-label="light bulb turned on"><path d="M19.51 18.8a5.13 5.13 0 0 0 1.5-3.75c0-2.72-2.32-4.82-5-4.82-2.7 0-5 2.1-5 4.82 0 1.77.41 2.77 1.45 3.72 1.08.98 2.1 2.4 2.27 4.15h2.55a7.1 7.1 0 0 1 2.23-4.12zm1.83 1.57c-.88.87-1.59 1.94-1.59 3.13 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6.01c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.44-.26c.34-.22.55-.58.55-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <br>
+  <a onClick="reset_theme()" class="button uno toggle-theme-reset hidden-phone">Reset <noscript>(JS required)</noscript></a>
+</span>
+
+  <container width="content-width">
+    <article>
+      
+        <p>Here’s a fun talk I gave at <strong>BrooklynJS October 2018</strong> about simple pranks you can pull off with Electron.js, a javascript package that lets you run webpages as cross-platform desktop apps! ⚡️👻⚡️</p>
+
+<script async="" class="speakerdeck-embed" data-id="eae6bd1c5be84926ad99c5989ff422ec" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<h2 id="links--resources">Links &amp; Resources</h2>
+
+<ul>
+  <li><a href="https://speakerdeck.com/pixely/spooking-your-friends-with-electron-brooklynjs-number-59">Slides on speakerdeck</a></li>
+  <li><a href="https://github.com/pixelyunicorn/spooky-electron-apps">Code on GitHub</a></li>
+  <li><a href="https://electronjs.org">ElectronJS website</a></li>
+</ul>
+
+<hr />
+
+<h2 id="text-version-w-image-descriptions">Text version w/ image descriptions</h2>
+
+<p>A text version of the slides with image descriptions can also be found here: <a href="https://github.com/pixelyunicorn/spooky-electron-apps/tree/master/slides" class="uno" target="_blank" rel="noreferrer"><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-000.svg" height="12" width="12" /> pixelyunicorn/spooky-electron-apps/slides/readme.md</a>.</p>
+
+<h3 id="slide-1">Slide 1</h3>
+
+<p><strong>Spook your friends with Electron! :ghost:</strong></p>
+
+<p>w/ Melody Spookling</p>
+
+<p>@pixelyunicorn</p>
+
+<p>Alt text: Ghost emoji.</p>
+
+<blockquote>
+  <p>(I love you front row!)</p>
+</blockquote>
+
+<h3 id="slide-2">Slide 2</h3>
+
+<blockquote>
+  <p>In case you were wondering what my profile picture was about, I helped a team of student coders build a cyborg alpaca using Arduino and Node.js!</p>
+</blockquote>
+
+<h3 id="slide-3">Slide 3</h3>
+
+<p>Hi, I’m Melody! (they/them)</p>
+
+<p>Alt text: Bell emoji.</p>
+
+<blockquote>
+  <p>Hi, I’m Melody. My pronouns are they/them. I’m from the sometimes sunny city of Philadelphia.</p>
+</blockquote>
+
+<h3 id="slide-4">Slide 4</h3>
+
+<p>Hi, I’m Melody! (they/them)</p>
+
+<p>Alt text: Taco emoji with the letters JS on top of it.</p>
+
+<blockquote>
+  <p>I started TacoJS. It’s like BrooklynJS but with tacos. We haven’t had a meetup recently, so if you want to speak feel free to send us a pull request! (tacojs.github.io)</p>
+</blockquote>
+
+<h3 id="slide-5">Slide 5</h3>
+
+<p>Hi, I’m Melody! (they/them)</p>
+
+<p>Alt text: Color pallete and desktop computer emojis.</p>
+
+<blockquote>
+  <p>I also specialize in design and web development.</p>
+</blockquote>
+
+<h3 id="side-6">Side 6</h3>
+
+<p>Hi, I’m Melody! (they/them)</p>
+
+<p>Alt text: Unicorn emoji.</p>
+
+<blockquote>
+  <p>I guess that makes me a unicorn!</p>
+</blockquote>
+
+<h3 id="slide-7">Slide 7</h3>
+
+<p>Hi, I’m Melody! (they/them)</p>
+
+<p>Alt text: Tea emoji.</p>
+
+<blockquote>
+  <p>I’m also super addicted to tea. Sometimes I wish Borogramming served tea instead of coffee…</p>
+</blockquote>
+
+<h3 id="slide-8">Slide 8</h3>
+
+<p>I’m looking for a job!</p>
+
+<p><a href="https://melody.dev">melody.dev</a></p>
+
+<blockquote>
+  <p>Oh, and I’m looking for a job! If you’re hiring, please check out my website at melody.dev!</p>
+</blockquote>
+
+<h3 id="slide-9">Slide 9</h3>
+
+<p>What is Electron?</p>
+
+<p>Alt text: An Electron logo, consisting of electrons revolving in an atom. Below it is the GitHub Octocat, which is a black cat with 8 octopus legs and a light-skinned face.</p>
+
+<blockquote>
+  <p>So what is Electron? Well, it’s a framework created by GitHub…</p>
+</blockquote>
+
+<h3 id="slide-10">Slide 10</h3>
+
+<p>What is Electron?</p>
+
+<p>Alt text: Crane and desktop window emojis.</p>
+
+<blockquote>
+  <p>…that allows you to build cross-platform desktop applications…</p>
+</blockquote>
+
+<h3 id="slide-11">Slide 11</h3>
+
+<p>What is Electron?</p>
+
+<p>Alt text: Javascript logo, consisting of the letters JS at the bottom right corner of a yellow square.</p>
+
+<blockquote>
+  <p>…using Javascript! And HTML! And CSS!</p>
+</blockquote>
+
+<h3 id="slide-12">Slide 12</h3>
+
+<p>Alt text: Logos of applications using Electron, including Skype, Discord, Slack, and GitHub.</p>
+
+<blockquote>
+  <p>Chances are, if you use desktops apps like Skype, Discord, Slack, or GitHub, you probably already use Elecrtron!</p>
+</blockquote>
+
+<h3 id="slide-13">Slide 13</h3>
+
+<p>Let’s build an Electron app!</p>
+
+<blockquote>
+  <p>So let’s build an Electron app!</p>
+</blockquote>
+
+<h3 id="slide-14">Slide 14</h3>
+
+<p>Let’s build an Electron app!</p>
+
+<p>https://github.com/electron/electron-quick-start</p>
+
+<blockquote>
+  <p>Now, no one likes to start from scratch, so I used this code as my starting point.</p>
+</blockquote>
+
+<h3 id="slide-15">Slide 15</h3>
+
+<p>Let’s build an Electron app!</p>
+
+<p><code class="highlighter-rouge">npm install electron</code></p>
+
+<blockquote>
+  <p>All you need to do is run npm install electron. (Speaking of npm, its co-founder is sitting right in front of me. Hi, Laurie!)</p>
+</blockquote>
+
+<h3 id="slide-16">Slide 16</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">electron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">electron</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">app</span><span class="p">,</span> <span class="nx">BrowserWindow</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">electron</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Then you require the Electron module.</p>
+</blockquote>
+
+<h3 id="slide-17">Slide 17</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createWindow</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Create the browser window.</span>
+    <span class="nx">win</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BrowserWindow</span><span class="p">({</span> <span class="na">width</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="mi">600</span> <span class="p">})</span>
+
+    <span class="c1">// and load the index.html of the app.</span>
+    <span class="nx">win</span><span class="p">.</span><span class="nx">loadFile</span><span class="p">(</span><span class="dl">'</span><span class="s1">boo.html</span><span class="dl">'</span><span class="p">)</span>
+
+    <span class="c1">// Emitted when the window is closed.</span>
+    <span class="nx">win</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">closed</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// Dereference the window object, usually you would store windows</span>
+        <span class="c1">// in an array if your app supports multi windows, this is the time</span>
+        <span class="c1">// when you should delete the corresponding element.</span>
+        <span class="nx">win</span> <span class="o">=</span> <span class="kc">null</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>And this function, at less than 10 lines of code without comments, is all it takes to create a basic Electron app.</p>
+</blockquote>
+
+<h3 id="slide-18">Slide 18</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">win</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BrowserWindow</span><span class="p">({</span> <span class="na">width</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="mi">600</span> <span class="p">})</span>
+<span class="nx">win</span><span class="p">.</span><span class="nx">loadFile</span><span class="p">(</span><span class="dl">'</span><span class="s1">boo.html</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>So what we’re doing here is creating a new BrowserWindow instance with a width of 800 and a height of 600. Then we’re loading an HTML page called boo.html. That’s it.</p>
+</blockquote>
+
+<h3 id="slide-19">Slide 19</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: Window with titlebar that says “Hello Word!”, containing a header tag that also says “Hello World!”</p>
+
+<blockquote>
+  <p>Here’s what that looks like! (Window resized to fit slide.)</p>
+</blockquote>
+
+<h3 id="slide-20">Slide 20</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">win</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BrowserWindow</span><span class="p">({</span> <span class="na">width</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="na">height</span><span class="p">:</span> <span class="mi">600</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Now, here’s where the evil comes in. You can add some pretty scary parameters into BrowserWindow…</p>
+</blockquote>
+
+<h3 id="slide-21">Slide 21</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">win</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BrowserWindow</span><span class="p">({</span>
+    <span class="na">width</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span>
+    <span class="na">height</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+    <span class="na">frame</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">transparent</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">toolbar</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">simpleFullscreen</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>…Like hiding the window frame, having a transparent background, hiding the title bar, and a full screen mode that doesn’t open in another workspace on macOS.</p>
+</blockquote>
+
+<h3 id="slide-22">Slide 22</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ignore mouse events</span>
+<span class="nx">win</span><span class="p">.</span><span class="nx">setIgnoreMouseEvents</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+
+<span class="c1">// Hide dock icon</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">dock</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+
+<span class="c1">// Set always on top</span>
+<span class="nx">win</span><span class="p">.</span><span class="nx">setAlwaysOnTop</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">floating</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">win</span><span class="p">.</span><span class="nx">setVisibleOnAllWorkspaces</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="nx">win</span><span class="p">.</span><span class="nx">setFullScreenable</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="nx">win</span><span class="p">.</span><span class="nx">setFullScreen</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>We can go even further! Let’s have clicks pass through it, hide the icon from the dock so no one knows it’s running, and set it so that it’s always on top and full-screen by default!</p>
+</blockquote>
+
+<h3 id="slide-23">Slide 23</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: A header tag that says “Hello World!” overlaid transparently directly on top of another window.</p>
+
+<blockquote>
+  <p>Here’s what that looks like! Notice how you can click through it, and how it persists on top of macOS spaces, like this full-screen window. This brings us some interesting use cases…</p>
+</blockquote>
+
+<h3 id="slide-24">Slide 24</h3>
+
+<p>Use Case #1:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;audio</span> <span class="na">autoloop</span> <span class="na">loop</span> <span class="na">style=</span><span class="s">"display: none"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"horse.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/audio&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>The first of which is playing horse noises in the background. This is literally all the code it takes.</p>
+</blockquote>
+
+<h3 id="slide-25">Slide 25</h3>
+
+<p>Use Case #1:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;audio</span> <span class="na">autoloop</span> <span class="na">loop</span> <span class="na">style=</span><span class="s">"display: none"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"horse.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/audio&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>It autoplays a file called horse.mp3 on loop, hidden on plain sight!</p>
+</blockquote>
+
+<h3 id="slide-26">Slide 26</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: A bunch of horses saying “neigh”</p>
+
+<blockquote>
+  <p>(Because I can’t embed sound into uploaded slideshows, imagine hearing a bunch of horses going neigh and not knowing where it’s coming from!)</p>
+</blockquote>
+
+<h3 id="slide-27">Slide 27</h3>
+
+<p>Use Case #2:</p>
+
+<p>Alt text: A watermark at the bottom-right corner of the screen that says “Activate Windows. Go to Settings to activate windows.” on the Windows operating system.</p>
+
+<blockquote>
+  <p>Has anyone here ever pirate Windows? Well, if you do, you may end up with this beautiful Activate Windows watermark. But what if you did pay for Windows? Or use macOS? Or even Linux?</p>
+</blockquote>
+
+<h3 id="slide-28">Slide 28</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: A watermark at the bottom-right corner of the screen that says “Activate Windows. Go to Settings to activate windows.” on the macOS operating system.</p>
+
+<blockquote>
+  <p>You’re not missing out on anything, thanks to Electron!</p>
+</blockquote>
+
+<h3 id="slide-29">Slide 29</h3>
+
+<p>Use Case #3:</p>
+
+<p>Alt text: A ransomware window demanding a Bitcoin payment</p>
+
+<blockquote>
+  <p>Of course, if you truly want to do evil, you can probably create Ransomware with Electron. Not that you should.</p>
+</blockquote>
+
+<h3 id="slide-30">Slide 30</h3>
+
+<p>Let’s go all out!</p>
+
+<blockquote>
+  <p>But that just scratches the surface of the harmless (and not-so-harmless) pranks we can pull on people. Let’s take this even further!</p>
+</blockquote>
+
+<h3 id="slide-31">Slide 31</h3>
+
+<p>Cracked Screen</p>
+
+<p>Alt text: an image of a cracked screen.</p>
+
+<blockquote>
+  <p>Here’s a jpeg of a cracked screen I found on the internet. You probably know where I’m going with this.</p>
+</blockquote>
+
+<h3 id="slide-32">Slide 32</h3>
+
+<p>Cracked Screen</p>
+
+<p>Alt text: an image of a cracked screen, but with a transparent background.</p>
+
+<blockquote>
+  <p>I can’t afford Photoshop, so I’ll use PowerPoint as my image editor. It has a built-in Remove Background feature that will give me a nice transparent image to work with.</p>
+</blockquote>
+
+<h3 id="slide-33">Slide 33</h3>
+
+<blockquote>
+  <p>Let’s just add that image to my CSS and have it cover the whole page…</p>
+</blockquote>
+
+<h3 id="slide-34">Slide 34</h3>
+
+<p>Alt text: an image of a cracked screen, but with a transparent background, overlaid on top of a desktop.</p>
+
+<blockquote>
+  <p>And look at that! (Sorry for breaking your projector, I’ll unbreak it in just a second!)</p>
+</blockquote>
+
+<h3 id="slide-35">Slide 35</h3>
+
+<p>Limitations (macOS)</p>
+
+<p>Cannot (yet) draw over cursor, launchpad, mission control, login screen, etc</p>
+
+<blockquote>
+  <p>Of course, it’s super obvious that it’s a prank because of Electron’s limitations, especially since it can’t draw over the cursor or menu bar…</p>
+</blockquote>
+
+<h3 id="slide-36">Slide 36</h3>
+
+<p>Glitch Effect</p>
+
+<p>https://tympanus.net/Tutorials/CSSGlitchEffect/</p>
+
+<blockquote>
+  <p>Let’s build something that’s a bit more subtle, like a glitching screen. Here’s one I found on the internet.</p>
+</blockquote>
+
+<h3 id="slide-37">Slide 37</h3>
+
+<p>Glitch Effect</p>
+
+<p>Alt text: A browser window featuring a glitching background image</p>
+
+<blockquote>
+  <p>Since Electron is powered by the same technology as web pages, we can bring this image glitch effect to the desktop!</p>
+</blockquote>
+
+<h3 id="slide-38">Slide 38</h3>
+
+<p>Glitch Effect</p>
+
+<p>https://electronjs.org/docs/api/desktop-capturer</p>
+
+<p>Alt text: A browser window showing documentation for desktopCapturer in Electron’s API</p>
+
+<blockquote>
+  <p>How this particular glitch effect works, is that it takes a background image and flickers multiple crops of it across the screen. Here’s something I found that will allow us to use a screenshot of the desktop as our background image.</p>
+</blockquote>
+
+<h3 id="slide-39">Slide 39</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: A terminal window.</p>
+
+<blockquote>
+  <p>Here’s a demo of how that works. Here’s a terminal window.</p>
+</blockquote>
+
+<h3 id="slide-40">Slide 40</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: A terminal window, with small sections of the windows tinted and shifted around.</p>
+
+<blockquote>
+  <p>Here’s that same terminal window, with the glitch applied. Notice how we are shifting and adding random tints everywhere.</p>
+</blockquote>
+
+<h3 id="slide-41">Slide 41</h3>
+
+<p>Demo time!</p>
+
+<p>Alt text: A terminal window, extremely distorted, completely tinted and shifted around.</p>
+
+<blockquote>
+  <p>If you’re feeling woke, you can also have the glitch run recursively! This may result in a memory leak crashing your computer at some point. (This actually did crash my computer!)</p>
+</blockquote>
+
+<h3 id="slide-42">Slide 42</h3>
+
+<p>Thank You! ~</p>
+
+<p>Alt text: Sparkle emoji.</p>
+
+<p>Hire me: https://melody.dev</p>
+
+<p>Tweet me: https://twitter.com/pixelyunicorn</p>
+
+<p>Splat me: SW-4207-5422-1528</p>
+
+<p>Patreon:  https://patreon.com/madebymelody</p>
+
+<blockquote>
+  <p>Thank you so much for coming out to see my BrooklynJS talk! Here’s where you can find me if you want to keep in touch.</p>
+</blockquote>
+
+      
+    </article>
+  </container>
+</section>
+<section id="plug">
+  <container width="content-width">
+    <hr>
+    <h3>About Me</h3>
+    <img src="/media/avatar.png" alt="Photo of Melody!" width="100" height="100" title="Melody's profile picture!" style="float: left; margin-right: 1ch"/>
+    <p>
+      Hi I'm Rashmika (Scarlet), a web developer, hacker, CTF player, penetration tester and much more, currently studying in Bachelor of Technology at one of the prestigious colleges of India, National Institute of Technology, Warangal. You can find me at <a class="uno" href="https://urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="12" width="12" /> @here </a>.
+    </p>
+    <br>
+    <h3>Tags &amp; Sharing</h3>
+    <p>
+      <a href="/hashtag/talks" class="button uno" >#talks</a><a href="/hashtag/dev" class="button uno" >#dev</a><a href="/hashtag/borojs" class="button uno" >#borojs</a>
+      <br>
+      <a id="share-mastodon" href="#share-mastodon" onclick="share_on_mastodon('Spook Your Friends with Electron', 'https://melody.dev/spooky-electron/', '#talks #dev #borojs ')" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-mastodon-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-mastodon-fff.svg" class="visible-theme-dark" height="14" width="14" /> Mastodon <noscript>(Please enable Javascript)</noscript></a>
+      <a id="share-twitter" href="http://twitter.com/share?text=Spook Your Friends with Electron&url=https://melody.dev/spooky-electron/&via=rashmika&hashtags=talks,dev,borojs," target="_blank" rel="noreferrer" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="14" width="14" /> Twitter</a>
+      <a id="edit-github" href="https://github.com/pixelyunicorn/melody.dev/blob/glitch/_posts/2018-10-31-spooky-electron/2018-10-31-spooky-electron.md" target="_blank" rel="noreferrer" class="button uno" ><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-fff.svg" class="visible-theme-dark" height="14" width="14" /> View on GitHub</a>
+      <a id="edit-glitch" href="https://glitch.com/edit/#!/melody?path=_posts/2018-10-31-spooky-electron/2018-10-31-spooky-electron.md:1:0" target="_blank" rel="noreferrer" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-day.svg" class="visible-theme-light" height="14" width="18"/><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-night.svg" class="visible-theme-dark" height="14" width="18"/> Remix on Glitch</a>
+    </p>
+    <blockquote id="patreon-beg">
+  <h3>Support my work!</h3>
+  <p>
+    I do a lot of things: I write, draw, code, hack, pentest, stream, and also drink a lot of coffee. I would love to keep doing what I love to do, but these things take time in energy. That's where you come in. By supporting what I do, I have less to worry about so I can go back to doing what I love 💖
+    <br><br>
+    <a class="button" href="https://ko-fi.com/yourid" target="_blank" rel="noreferrer" style="color:currentColor"><img role="presentation" src="https://ko-fi.com/favicon.png" height="16" width="16" /> <strong>Buy me a Taco!</strong></a>
+    <a class="button" onclick="hide_patreon()">Remind me later <noscript>(JS required)</noscript></a>
+  </p>
+</blockquote>
+
+    <h3>More Posts</h3>
+    <p class="page-nav">
+      
+        <a class="prev uno button" href="/septa/">← SEPTA System Status</a>
+      
+      
+        <a class="next uno button" href="/ie6/">Modern Web Dev on IE6 →</a>
+      
+    </p>
+  </container>
+</section>
+
+    <script>if(navigator.doNotTrack != 1 && document.title != "four-hundred-and-four") { document.write('<img src="https://sapphic-squid-adalytics.glitch.me/counter.png?fallback=rashmika.me&color=black" alt="" style="vertical-align: bottom;" width="1" height="1" aria-hidden="true" />'); }</script>
+  </body>
+</html>

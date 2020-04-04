@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>borojs</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://cdn.glitch.com/cac749b9-a651-4b28-900e-eab82ca322d7/squiddo.png?1551146813375">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- general seo -->
+    <meta name="description" content="I’m an interactive web developer, designer, and storyteller. Here's something interesting I worked on!">
+
+    <!-- zuckerberg card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="borojs">
+    <meta property="og:description" content="I’m an interactive web developer, designer, and storyteller. Here's something interesting I worked on!">
+    <meta property="og:url" content="https://melody.dev/hashtag/borojs/">
+    
+
+    <!-- @jack card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@pixelyunicorn">
+    <meta name="twitter:creator" content="@pixelyunicorn">
+    <meta name="twitter:title" content="borojs">
+    <meta name="twitter:description" content="I’m an interactive web developer, designer, and storyteller. Here's something interesting I worked on!">
+    
+  </head>
+  <body class="">
+    <span id="top"></span>
+<section id="main">
+  <container>
+    <span class="toggle-themes hidden-phone ">
+  <a onClick="toggle_theme('dark')" class="button uno toggle-theme-dark"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14.75 2.15c0-.63.56-1.15 1.25-1.15.7 0 1.25.52 1.25 1.15v2.31c0 .64-.56 1.16-1.25 1.16s-1.25-.52-1.25-1.16v-2.3zM7.4 5.28a1.33 1.33 0 0 0-1.77 0 1.1 1.1 0 0 0 0 1.63L7.4 8.54c.5.45 1.28.45 1.77 0a1.1 1.1 0 0 0 0-1.63L7.4 5.28zm13.94 15.1c-.88.86-1.59 1.93-1.59 3.12 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.43-.26c.35-.22.56-.58.56-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14zM26.67 5.28a1.33 1.33 0 0 0-1.77 0L23.14 6.9a1.1 1.1 0 0 0 0 1.63c.48.45 1.27.45 1.76 0l1.77-1.63a1.1 1.1 0 0 0 0-1.63zm3.08 8.41c.69 0 1.25.52 1.25 1.16 0 .63-.56 1.15-1.25 1.15h-2.5c-.69 0-1.25-.52-1.25-1.15 0-.64.56-1.16 1.25-1.16h2.5zM6 14.85c0-.64-.56-1.16-1.25-1.16h-2.5c-.69 0-1.25.52-1.25 1.16 0 .63.56 1.15 1.25 1.15h2.5C5.44 16 6 15.48 6 14.85z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <a onClick="toggle_theme('light')" class="button uno toggle-theme-light"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg" aria-label="light bulb turned on"><path d="M19.51 18.8a5.13 5.13 0 0 0 1.5-3.75c0-2.72-2.32-4.82-5-4.82-2.7 0-5 2.1-5 4.82 0 1.77.41 2.77 1.45 3.72 1.08.98 2.1 2.4 2.27 4.15h2.55a7.1 7.1 0 0 1 2.23-4.12zm1.83 1.57c-.88.87-1.59 1.94-1.59 3.13 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6.01c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.44-.26c.34-.22.55-.58.55-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <br>
+  <a onClick="reset_theme()" class="button uno toggle-theme-reset hidden-phone">Reset <noscript>(JS required)</noscript></a>
+</span>
+
+    <h1>#<yeet>borojs</yeet></h1>
+
+<hr>
+
+<style>
+
+/* Spaces */
+/* Fonts */
+/* Colors */
+/* Etc */
+#tile-lofi-npm {
+  grid-column: auto/span calc(6 + 1);
+  grid-row: auto/span calc(6 + 1);
+  background-image: url(/lofi-npm/tile.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-lofi-npm h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #cd00cd 90%); }
+  @media screen and (max-width: 1095px) {
+    #tile-lofi-npm {
+      grid-column: auto / span 7;
+      grid-row: auto / span 7; } }
+  @media screen and (max-width: 1319px) {
+    #tile-lofi-npm {
+      grid-column: auto/span calc(6 + 1);
+      /* grid-row: auto / span calc(6 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-ie6 {
+  grid-column: auto/span calc(5 + 1);
+  grid-row: auto/span calc(5 + 1);
+  background-image: url(/ie6/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-ie6 h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #4d4dff 90%); }
+  @media screen and (max-width: 1095px) {
+    #tile-ie6 {
+      grid-column: auto / span 7;
+      grid-row: auto / span 7; } }
+  @media screen and (max-width: 1319px) {
+    #tile-ie6 {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-spooky-electron {
+  grid-column: auto/span calc(6 + 1);
+  grid-row: auto/span calc(6 + 1);
+  background-image: url(/spooky-electron/tile.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-spooky-electron h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #00cdcd 90%); }
+  @media screen and (max-width: 1095px) {
+    #tile-spooky-electron {
+      grid-column: auto / span 7;
+      grid-row: auto / span 7; } }
+  @media screen and (max-width: 1319px) {
+    #tile-spooky-electron {
+      grid-column: auto/span calc(6 + 1);
+      /* grid-row: auto / span calc(6 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+</style>
+
+<tiles class="posts">
+  
+    <a href="/lofi-npm/" id="tile-lofi-npm" class="tile bg-purple ">
+      
+      <h3><span title="lofi hip hop beats to npm install to">lofi hip hop beats to npm install to</span></h3>
+    </a>
+  
+    <a href="/ie6/" id="tile-ie6" class="tile bg-blue ">
+      
+      <h3><span title="Modern Web Dev on IE6">Modern Web Dev on IE6</span></h3>
+    </a>
+  
+    <a href="/spooky-electron/" id="tile-spooky-electron" class="tile bg-teal ">
+      
+      <h3><span title="Spook Your Friends with Electron">Spook Your Friends with Electron</span></h3>
+    </a>
+  
+</tiles>
+
+<!-- <blogroll class="visible-phone">
+  
+    <a href="/lofi-npm/" class="bg-purple">
+      <h3>lofi hip hop beats to npm install to</h3>
+      <p class="metadata">
+        Published May 11, 2019 •
+        
+<span class="reading-time" title="Estimated read time">
+  7 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/ie6/" class="bg-blue">
+      <h3>Modern Web Dev on IE6</h3>
+      <p class="metadata">
+        Published November 8, 2018 •
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/spooky-electron/" class="bg-teal">
+      <h3>Spook Your Friends with Electron</h3>
+      <p class="metadata">
+        Published October 31, 2018 •
+        
+<span class="reading-time" title="Estimated read time">
+  9 mins
+</span>
+ read
+      </p>
+    </a>
+  
+</blogroll> -->
+
+<hr>
+
+<a href="/" class="button uno">← Back Home</a>
+
+  </container>
+</section>
+
+    <script>if(navigator.doNotTrack != 1 && document.title != "four-hundred-and-four") { document.write('<img src="https://sapphic-squid-adalytics.glitch.me/counter.png?fallback=rashmika.me&color=black" alt="" style="vertical-align: bottom;" width="1" height="1" aria-hidden="true" />'); }</script>
+  </body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rashmika(Scarlet)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://cdn.glitch.com/cac749b9-a651-4b28-900e-eab82ca322d7/squiddo.png?1551146813375">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- general seo -->
+    <meta name="description" content="I’m an interactive web developer, designer, and storyteller. Here's something interesting I worked on!">
+
+    <!-- zuckerberg card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rashmika(Scarlet)">
+    <meta property="og:description" content="I’m an interactive web developer, designer, and storyteller. Here's something interesting I worked on!">
+    <meta property="og:url" content="https://melody.dev/">
+    
+    <meta property="og:image" content="https://melody.dev/meta-preview.png">
+    
+
+    <!-- @jack card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pixelyunicorn">
+    <meta name="twitter:creator" content="@pixelyunicorn">
+    <meta name="twitter:title" content="Rashmika(Scarlet)">
+    <meta name="twitter:description" content="I’m an interactive web developer, designer, and storyteller. Here's something interesting I worked on!">
+    
+    <meta name="twitter:image:src" content="https://melody.dev/meta-preview.png">
+    <meta name="twitter:image:alt" content="Rashmika(Scarlet)">
+    
+  </head>
+  <body class="">
+    <span id="top"></span>
+<section id="main">
+  <container>
+    <span class="toggle-themes hidden-phone ">
+  <a onClick="toggle_theme('dark')" class="button uno toggle-theme-dark"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14.75 2.15c0-.63.56-1.15 1.25-1.15.7 0 1.25.52 1.25 1.15v2.31c0 .64-.56 1.16-1.25 1.16s-1.25-.52-1.25-1.16v-2.3zM7.4 5.28a1.33 1.33 0 0 0-1.77 0 1.1 1.1 0 0 0 0 1.63L7.4 8.54c.5.45 1.28.45 1.77 0a1.1 1.1 0 0 0 0-1.63L7.4 5.28zm13.94 15.1c-.88.86-1.59 1.93-1.59 3.12 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.43-.26c.35-.22.56-.58.56-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14zM26.67 5.28a1.33 1.33 0 0 0-1.77 0L23.14 6.9a1.1 1.1 0 0 0 0 1.63c.48.45 1.27.45 1.76 0l1.77-1.63a1.1 1.1 0 0 0 0-1.63zm3.08 8.41c.69 0 1.25.52 1.25 1.16 0 .63-.56 1.15-1.25 1.15h-2.5c-.69 0-1.25-.52-1.25-1.15 0-.64.56-1.16 1.25-1.16h2.5zM6 14.85c0-.64-.56-1.16-1.25-1.16h-2.5c-.69 0-1.25.52-1.25 1.16 0 .63.56 1.15 1.25 1.15h2.5C5.44 16 6 15.48 6 14.85z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <a onClick="toggle_theme('light')" class="button uno toggle-theme-light"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg" aria-label="light bulb turned on"><path d="M19.51 18.8a5.13 5.13 0 0 0 1.5-3.75c0-2.72-2.32-4.82-5-4.82-2.7 0-5 2.1-5 4.82 0 1.77.41 2.77 1.45 3.72 1.08.98 2.1 2.4 2.27 4.15h2.55a7.1 7.1 0 0 1 2.23-4.12zm1.83 1.57c-.88.87-1.59 1.94-1.59 3.13 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6.01c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.44-.26c.34-.22.55-.58.55-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <br>
+  <a onClick="reset_theme()" class="button uno toggle-theme-reset hidden-phone">Reset <noscript>(JS required)</noscript></a>
+</span>
+
+    <h1 id="welcome">
+  <span class="hidden-phone"><svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="welcome" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="64" height="64" title="welcome"><g><path d="M24.518,7.453c0.279,0.487 0.058,1.095 -0.452,1.329l-0.103,0.047c-0.437,0.201 -0.953,0.013 -1.194,-0.404c-1.199,-2.078 -2.928,-3.659 -4.917,-4.673c-0.493,-0.251 -0.741,-0.834 -0.529,-1.346c0.21,-0.509 0.794,-0.755 1.288,-0.511c2.385,1.179 4.46,3.053 5.89,5.53l0.017,0.028Zm-2.539,1.428c0.215,0.371 0.046,0.837 -0.343,1.016l-0.568,0.26c-0.301,0.138 -0.655,0.011 -0.821,-0.276c-0.865,-1.499 -2.094,-2.656 -3.511,-3.425c-0.487,-0.265 -0.736,-0.846 -0.524,-1.358c0.21,-0.509 0.794,-0.756 1.283,-0.504c1.813,0.938 3.388,2.388 4.484,4.287Zm3.225,5.464c-0.13,0.288 -0.264,0.586 -0.336,0.89c-0.28,1.179 0,2.632 0,2.632c0,0 0.513,2.835 0,4.289c-0.855,2.423 -2.471,4.253 -5.113,4.253c-1.282,0 -2.765,-1.207 -3.956,-2.177l-0.001,0l0,0l-0.001,-0.001c-0.388,-0.316 -0.744,-0.606 -1.053,-0.821c-0.807,-0.563 -2.506,-1.542 -3.711,-2.237c-0.67,-0.386 -1.187,-0.684 -1.312,-0.773c-0.631,-0.448 -0.731,-1.306 -0.38,-1.867c0.351,-0.561 1.245,-0.91 1.929,-0.37c0.684,0.54 2.946,1.941 2.946,1.941c0,0 -3.64,-3.678 -4.283,-4.221c-0.644,-0.544 -0.727,-1.5 -0.212,-2.014c0.514,-0.514 1.324,-0.538 1.799,-0.151c0.475,0.387 4.364,4.149 4.364,4.149c0,0 -3.987,-5.03 -4.364,-5.495c-0.376,-0.465 -0.483,-1.281 0,-1.764c0.484,-0.484 1.325,-0.486 1.826,0c0.5,0.486 4.378,5.174 4.378,5.174c0,0 -2.669,-4.478 -2.98,-5.174c-0.31,-0.696 -0.03,-1.597 0.617,-1.84c0.648,-0.242 1.384,-0.054 1.802,0.53c0.115,0.159 0.433,0.744 0.85,1.511c1.112,2.044 2.928,5.382 3.453,5.382c0.477,0 0.511,-0.272 0.577,-0.805l0,0l0,-0.001c0.034,-0.274 0.077,-0.617 0.193,-1.027c0.307,-1.086 2.073,-2.919 3.071,-1.755c0.446,0.521 0.181,1.109 -0.103,1.742Zm0.802,12.595c-2.22,2.422 -3.372,2.045 -4.129,1.488c-1.62,-1.191 -1.406,-1.27 -0.507,-1.605c0.648,-0.24 1.65,-0.612 2.579,-1.626c0.843,-0.92 1.227,-1.771 1.486,-2.346c0.424,-0.939 0.516,-1.142 1.734,0.293c0.609,0.716 1.058,1.374 -1.163,3.796Zm-20.864,-8.729c-0.473,0.081 -0.791,0.535 -0.667,0.999c0.627,2.34 1.901,4.333 3.578,5.839c0.409,0.368 1.038,0.281 1.373,-0.157c0.336,-0.439 0.247,-1.066 -0.159,-1.443c-1.337,-1.242 -2.352,-2.863 -2.86,-4.756c-0.099,-0.37 -0.456,-0.619 -0.834,-0.555l-0.431,0.073Zm-2.709,0.46c0.526,-0.089 1.023,0.26 1.161,0.775c0.681,2.539 2.069,4.699 3.897,6.324c0.414,0.368 0.501,0.995 0.165,1.434c-0.335,0.438 -0.963,0.525 -1.379,0.163c-2.167,-1.887 -3.815,-4.418 -4.615,-7.403c-0.011,-0.041 -0.021,-0.082 -0.032,-0.124c-0.141,-0.542 0.23,-1.071 0.783,-1.165l0.02,-0.004Z"></path></g></svg></span> Hey hi, I’m <yeet>Rashmika(Scarlet)</yeet>!!
+</h1>
+
+<p class="lead">
+  I’m an interactive web developer, hacker, pentester, CTF player and social engineer. <br class="hidden-phone"> Here's a taste of what I do →
+</p>
+
+
+
+<style>
+
+/* Spaces */
+/* Fonts */
+/* Colors */
+/* Etc */
+tiles {
+  margin-left: 20px;
+  margin-right: -20px; }
+  @media screen and (max-width: 600px) {
+    tiles {
+      margin-left: 0;
+      margin-right: -20px; } }
+
+#tile-guru {
+  grid-column: auto/span calc(5 + 1 + 1);
+  grid-row: auto/span calc(5 + 1 + 1);
+  margin-left: calc(40px * 1);
+  margin-top: calc(40px * 1);
+  background-image: url(/guru/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-guru h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #00cdcd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-guru {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-custom-hooks {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(10 + 1 + 2);
+  margin-top: calc(40px * 2);
+  background-image: url(/custom-hooks/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-custom-hooks h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #4d4dff 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-custom-hooks {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(10 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-transit-guides {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(7 + 1 );
+  background-image: url(/transit-guides/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-transit-guides h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #cd00cd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-transit-guides {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(7 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-queerjs {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(5 + 1 + 2);
+  margin-top: calc(40px * 2);
+  background-image: url(/queerjs/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-queerjs h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #ffc04d 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-queerjs {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-splatoon {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(5 + 1 + 1);
+  margin-top: calc(40px * 1);
+  background-image: url(/splatoon/tile.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-splatoon h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #cd00cd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-splatoon {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-events {
+  grid-column: auto/span calc(6 + 1 );
+  grid-row: auto/span calc(6 + 1 );
+  background-image: url(/events/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-events h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #ff4d4d 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-events {
+      grid-column: auto/span calc(6 + 1);
+      /* grid-row: auto / span calc(6 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-spooky-electron {
+  grid-column: auto/span calc(6 + 1 );
+  grid-row: auto/span calc(6 + 1 );
+  background-image: url(/spooky-electron/tile.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-spooky-electron h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #00cdcd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-spooky-electron {
+      grid-column: auto/span calc(6 + 1);
+      /* grid-row: auto / span calc(6 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-first-website {
+  grid-column: auto/span calc(11 + 1 );
+  grid-row: auto/span calc(5 + 1 );
+  background-image: url(/first-website/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-first-website h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #ff4d4d 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-first-website {
+      grid-column: auto/span calc(11 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-lofi-npm {
+  grid-column: auto/span calc(6 + 1 );
+  grid-row: auto/span calc(6 + 1 );
+  background-image: url(/lofi-npm/tile.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-lofi-npm h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #cd00cd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-lofi-npm {
+      grid-column: auto/span calc(6 + 1);
+      /* grid-row: auto / span calc(6 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-alex-hillman {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(7 + 1 );
+  background-image: url(/alex-hillman/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-alex-hillman h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #a6a6a6 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-alex-hillman {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(7 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-transit-cards {
+  grid-column: auto/span calc(6 + 1 );
+  grid-row: auto/span calc(6 + 1 );
+  background-image: url(/transit-cards/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-transit-cards h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #00cdcd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-transit-cards {
+      grid-column: auto/span calc(6 + 1);
+      /* grid-row: auto / span calc(6 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-ie6 {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(5 + 1 );
+  background-image: url(/ie6/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-ie6 h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #4d4dff 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-ie6 {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+#tile-smart-wand {
+  grid-column: auto/span calc(5 + 1 );
+  grid-row: auto/span calc(5 + 1 );
+  background-image: url(/smart-wand/tile.svg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+  #tile-smart-wand h3 span {
+    background-image: linear-gradient(to right, transparent 50%, #cd00cd 90%); }
+  @media screen and (max-width: 1319px) {
+    #tile-smart-wand {
+      grid-column: auto/span calc(5 + 1);
+      /* grid-row: auto / span calc(5 + 1); */
+      margin-left: 0;
+      /* margin-top: 0; */ } }
+
+</style>
+
+<tiles class="posts">
+  
+    <a href="/guru/" id="tile-guru" class="tile bg-teal ">
+      
+      <h3><span title="Guru">Guru</span></h3>
+    </a>
+  
+    <a href="/custom-hooks/" id="tile-custom-hooks" class="tile bg-blue ">
+      
+      <h3><span title="Visual Intro to Custom React Hooks">Visual Intro to Custom React Hooks</span></h3>
+    </a>
+  
+    <a href="/transit-guides/" id="tile-transit-guides" class="tile bg-purple ">
+      
+      <h3><span title="Transit Guides">Transit Guides</span></h3>
+    </a>
+  
+    <a href="/queerjs/" id="tile-queerjs" class="tile bg-orange ">
+      <span class="draft-banner"><span class="hidden-phone">COMING </span>SOON!</span>
+      <h3><span title="TacoJS & QueerJS">TacoJS & QueerJS</span></h3>
+    </a>
+  
+    <a href="/splatoon/" id="tile-splatoon" class="tile bg-purple squiddo">
+      
+      <h3><span title="Splatoon Streaming">Splatoon Streaming</span></h3>
+    </a>
+  
+    <a href="/events/" id="tile-events" class="tile bg-red ">
+      
+      <h3><span title="Upcoming Talks &amp; Events">Upcoming Talks &amp; Events</span></h3>
+    </a>
+  
+    <a href="/spooky-electron/" id="tile-spooky-electron" class="tile bg-teal ">
+      
+      <h3><span title="Spook Your Friends with Electron">Spook Your Friends with Electron</span></h3>
+    </a>
+  
+    <a href="/first-website/" id="tile-first-website" class="tile bg-red ">
+      <span class="draft-banner"><span class="hidden-phone">COMING </span>SOON!</span>
+      <h3><span title="Build Your First Website!">Build Your First Website!</span></h3>
+    </a>
+  
+    <a href="/lofi-npm/" id="tile-lofi-npm" class="tile bg-purple ">
+      
+      <h3><span title="lofi hip hop beats to npm install to">lofi hip hop beats to npm install to</span></h3>
+    </a>
+  
+    <a href="/alex-hillman/" id="tile-alex-hillman" class="tile bg-gray ">
+      <span class="draft-banner"><span class="hidden-phone">COMING </span>SOON!</span>
+      <h3><span title="Alex Hillman">Alex Hillman</span></h3>
+    </a>
+  
+    <a href="/transit-cards/" id="tile-transit-cards" class="tile bg-teal ">
+      
+      <h3><span title="Let's Talk Transit Cards!">Let's Talk Transit Cards!</span></h3>
+    </a>
+  
+    <a href="/ie6/" id="tile-ie6" class="tile bg-blue ">
+      
+      <h3><span title="Modern Web Dev on IE6">Modern Web Dev on IE6</span></h3>
+    </a>
+  
+    <a href="/smart-wand/" id="tile-smart-wand" class="tile bg-purple ">
+      <span class="draft-banner"><span class="hidden-phone">COMING </span>SOON!</span>
+      <h3><span title="Smart Wand">Smart Wand</span></h3>
+    </a>
+  
+</tiles>
+
+<!-- <blogroll class="visible-phone">
+  <h2>Recent Posts</h2>
+  <br>
+  
+    <a href="/events/" class="bg-red">
+      <h3>Upcoming Talks &amp; Events</h3>
+      <p class="metadata">
+        Published December 23, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/smart-wand/" class="bg-purple">
+      <h3>Smart Wand</h3>
+      <p class="metadata">
+        
+        Draft •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/queerjs/" class="bg-orange">
+      <h3>TacoJS & QueerJS</h3>
+      <p class="metadata">
+        
+        Draft •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/transit-cards/" class="bg-teal">
+      <h3>Let's Talk Transit Cards!</h3>
+      <p class="metadata">
+        Published September 4, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  5 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/alex-hillman/" class="bg-gray">
+      <h3>Alex Hillman</h3>
+      <p class="metadata">
+        
+        Draft •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/custom-hooks/" class="bg-blue">
+      <h3>Visual Intro to Custom React Hooks</h3>
+      <p class="metadata">
+        Published July 17, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  2 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/guru/" class="bg-teal">
+      <h3>Guru</h3>
+      <p class="metadata">
+        Published May 13, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  2 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/lofi-npm/" class="bg-purple">
+      <h3>lofi hip hop beats to npm install to</h3>
+      <p class="metadata">
+        Published May 11, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  7 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/splatoon/" class="bg-purple">
+      <h3>Splatoon Streaming</h3>
+      <p class="metadata">
+        Published May 1, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  2 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/transit-guides/" class="bg-purple">
+      <h3>Transit Guides</h3>
+      <p class="metadata">
+        Published April 20, 2019 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  2 mins
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/first-website/" class="bg-red">
+      <h3>Build Your First Website!</h3>
+      <p class="metadata">
+        
+        Draft •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/ie6/" class="bg-blue">
+      <h3>Modern Web Dev on IE6</h3>
+      <p class="metadata">
+        Published November 8, 2018 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  1 min
+</span>
+ read
+      </p>
+    </a>
+  
+    <a href="/spooky-electron/" class="bg-teal">
+      <h3>Spook Your Friends with Electron</h3>
+      <p class="metadata">
+        Published October 31, 2018 •
+        
+        
+        
+<span class="reading-time" title="Estimated read time">
+  9 mins
+</span>
+ read
+      </p>
+    </a>
+  
+</blogroll> -->
+
+<!-- <p>
+  Filter by hashtag:
+  <a class="uno" href="/hashtag/dev">#dev</a>
+  <a class="uno" href="/hashtag/design">#design</a>
+  <a class="uno" href="/hashtag/talks">#talks</a>
+  <a class="uno" href="/hashtag/guides">#guides</a>
+ <a class="uno" href="/hashtag/transit">#transit</a>
+</p> -->
+
+<p>
+  <strong>There's more:</strong> check out my extended <a href="/websites" class="uno">🌎 websites!</a>
+</p>
+
+<hr>
+
+<h2 id="about">
+  <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="emoji" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="38" height="38" title="emoji"><g><path d="M26,16c0,5.523 -4.477,10 -10,10c-5.523,0 -10,-4.477 -10,-10c0,-5.523 4.477,-10 10,-10c5.523,0 10,4.477 10,10Zm2,0c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627 5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-17.5,0c0.829,0 1.5,-0.672 1.5,-1.5c0,-0.828 -0.671,-1.5 -1.5,-1.5c-0.829,0 -1.5,0.672 -1.5,1.5c0,0.828 0.671,1.5 1.5,1.5Zm12.5,-1.5c0,0.828 -0.671,1.5 -1.5,1.5c-0.829,0 -1.5,-0.672 -1.5,-1.5c0,-0.828 0.671,-1.5 1.5,-1.5c0.829,0 1.5,0.672 1.5,1.5Zm-6.999,8c2.45,0 4.534,-1.715 5,-4c0.232,-1.14 -3,-1.5 -5,-1.5c-2,0 -5.259,0.231 -5,1.5c0.466,2.285 2.549,4 5,4Zm2,-2c0,0 -0.896,0.5 -2,0.5c-1.105,0 -2,-0.5 -2,-0.5c0,0 0.895,-1 2,-1c1.104,0 2,1 2,1Z"></path></g></svg>
+  Here's a lil' <yeet>about me:</yeet>
+</h2>
+
+<p>
+  Nice to meet you!! I'm Rashmika(Scarlet): 🍵 sparkly tea witch, 🚆 transit nerd, 🌮 foodie, and 🦄 web unicorn. Know me more <a class="uno" href="/they">here</a>. ✨
+</p>
+
+<p>
+  You can find me on
+  <a class="uno" href="https://twitter.com/urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="14" width="14" /> Twitter</a>,
+  <a class="uno" href="https://dribbble.com/urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-dribbble.svg" height="14" width="14" /> Dribbble</a>,
+  <a class="uno" href="https://twitch.tv/urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" height="14" width="14" /> Twitch</a>, and
+  <a class="uno" href="https://github.com/urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-fff.svg" class="visible-theme-dark" height="14" width="14" /> GitHub</a>.
+</p>
+
+<p>
+  Love what I do? Support me thru 
+  <a class="uno" href="https://cash.app/$pixely" target="_blank" rel="noreferrer">Cash App</a>,
+  <a class="uno" href="https://ko-fi.com/pixely" target="_blank" rel="noreferrer">Ko-Fi</a>,
+  <a class="uno" href="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218%2Fvcard.vcf" target="_blank" rel="noreferrer">Monzo</a>,
+  or <a class="uno" href="https://patreon.com/madebymelody" target="_blank" rel="noreferrer">Patreon</a>!
+  <br>
+  I also got an <a class="uno" href="https://www.amazon.com/hz/wishlist/ls/1WZCG3ZSOCGUR" target="_blank" rel="noreferrer">Amazon Wish List</a>. Your support means a lot to me! 💜
+</p> 
+
+<h2>
+  <svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="briefcase" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="38" height="38" title="briefcase"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M14 11.024A77.266 77.266 0 0 1 16 11c10.083 0 11 1.5 11 8s-.917 8-11 8c-.711 0-1.377-.007-2-.024-8.208-.212-9-1.935-9-7.976s.792-7.764 9-7.976zM7 19c0 1.581.039 2.668.25 3.542.166.799.259 1.02.715 1.332.359.285 1.028.598 2.38.816 1.384.226 3.158.31 5.604.31H16c2.473 0 4.261-.083 5.655-.31 1.352-.218 2.021-.53 2.38-.816.456-.313.55-.533.715-1.332.211-.874.25-1.96.25-3.542 0-1.581-.039-2.668-.25-3.542-.166-.799-.259-1.02-.715-1.332-.359-.285-1.028-.598-2.38-.816C20.26 13.083 18.473 13 16 13h-.05c-2.447 0-4.22.085-5.605.31-1.352.218-2.021.53-2.38.816-.456.313-.55.533-.715 1.332C7.039 16.332 7 17.418 7 19z"></path><path d="M16 6a5 5 0 0 0-5 5v14.5a1 1 0 1 0 2 0V11a3 3 0 0 1 6 0v14.5a1 1 0 1 0 2 0V11a5 5 0 0 0-5-5z"></path></g></svg>
+  Let's build something <yeet>cool</yeet> together!
+</h2>
+
+<p>
+  You can keep track of my availability, what I'm working on, and events I'll attending on my Notion page:
+</p>
+
+<p>
+  <a href="https://urid/" class="button uno" target="_blank" rel="noreferrer">📓 Scarlet on Notion →</a>
+</p>
+
+<hr>
+
+<p>
+  This site is open source on <a href="https://github.com/pixelyunicorn/melody.dev" target="_blank" rel="noreferrer" class="uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-fff.svg" class="visible-theme-dark" height="14" width="14" /> GitHub</a>/<a href="https://glitch.com/~melody" target="_blank" rel="noreferrer" class="uno"><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-day.svg" class="visible-theme-light" height="14" width="18"/><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-night.svg" class="visible-theme-dark" height="14" width="18"/> Glitch</a> and built on a <a href="https://youtu.be/urchannel" target="_blank" rel="noreferrer" class="uno">livestream</a>!
+</p>
+
+<p>
+  Public <a href="https://sapphic-squid-adalytics.glitch.me/" target="_blank" rel="noreferrer" class="uno">pageview counters</a> are used with respect to do not track preferences.
+</p>
+
+<br>
+
+  </container>
+</section>
+
+    <script>if(navigator.doNotTrack != 1 && document.title != "four-hundred-and-four") { document.write('<img src="https://sapphic-squid-adalytics.glitch.me/counter.png?fallback=rashmika.me&color=black" alt="" style="vertical-align: bottom;" width="1" height="1" aria-hidden="true" />'); }</script>
+  </body>
+</html>

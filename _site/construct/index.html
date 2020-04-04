@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Build your first game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://cdn.glitch.com/cac749b9-a651-4b28-900e-eab82ca322d7/squiddo.png?1551146813375">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- general seo -->
+    <meta name="description" content="This is a tutorial for people who want to learn to program, and have absolutelyno experience.">
+
+    <!-- zuckerberg card -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Build your first game">
+    <meta property="og:description" content="This is a tutorial for people who want to learn to program, and have absolutelyno experience.">
+    <meta property="og:url" content="https://melody.dev/construct/">
+    
+    <meta property="og:image" content="https://melody.dev/construct/../codeday/meta-preview.png">
+    
+    <meta property="og:article:author" content="Rashmika Kolleri">
+    <meta property="og:article:published_time" content="2015-11-03 00:00:00 +0530">
+    
+
+    <!-- @jack card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pixelyunicorn">
+    <meta name="twitter:creator" content="@pixelyunicorn">
+    <meta name="twitter:title" content="Build your first game">
+    <meta name="twitter:description" content="This is a tutorial for people who want to learn to program, and have absolutelyno experience.">
+    
+    <meta name="twitter:image:src" content="https://melody.dev/construct/../codeday/meta-preview.png">
+    <meta name="twitter:image:alt" content="Build your first game">
+    
+  </head>
+  <body class="page-construct accent-red ">
+    <span id="top"></span>
+<nav>
+  <container>
+    <a href="/" class="button duo"><svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="purse-fill" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="22" height="22" title="purse-fill"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M16 11.5c-.711 0-1.377.007-2 .024-8.208.213-9 1.935-9 7.976s.792 7.764 9 7.976c.623.017 1.289.024 2 .024 10.083 0 11-1.5 11-8s-.917-8-11-8zm-.018 5.88c1.299-1.28 2.597-.96 3.247-.32 2.597 2.56-2.45 5.94-3.247 5.94-.796 0-5.843-3.38-3.246-5.94.65-.64 1.948-.96 3.246.32z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5a5 5 0 0 0-5 5v2a1 1 0 1 0 2 0v-2a3 3 0 0 1 6 0v2a1 1 0 1 0 2 0v-2a5 5 0 0 0-5-5z"></path></g></svg> Rashmika</a>
+  </container>
+</nav>
+
+<header class="bg-red ">
+    <span id="top"></span>
+    
+    <div class="feature hidden-tablet">
+      <img src="/construct/../events/feature.svg" role="presentation"/>
+      <tiles style="
+          grid-template-columns: repeat(16, 1fr);
+          grid-template-rows: repeat(10, 1fr);
+          ">
+        <tile style="
+          grid-column: 6 / span 6;
+          grid-row: 3 / span 6;
+        ">
+          <h1>Build your first game</h1>
+        </tile>
+      </tiles>
+      <p class="metadata feature-above">
+        
+        Published November 3, 2015 •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  7 mins
+</span>
+ read
+      </p>
+    </div>
+    <div class="visible-tablet">
+      <br class="hidden-phone">
+      <h1>Build your first game</h1>
+      <p class="metadata">
+        
+        Published November 3, 2015 •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  7 mins
+</span>
+ read
+      </p>
+      <img src="/construct/../events/feature.svg" alt="Build your first game"/>
+    </div>
+    
+</header>
+<section id="main">
+  <span class="toggle-themes hidden-phone hidden-tablet">
+  <a onClick="toggle_theme('dark')" class="button uno toggle-theme-dark"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14.75 2.15c0-.63.56-1.15 1.25-1.15.7 0 1.25.52 1.25 1.15v2.31c0 .64-.56 1.16-1.25 1.16s-1.25-.52-1.25-1.16v-2.3zM7.4 5.28a1.33 1.33 0 0 0-1.77 0 1.1 1.1 0 0 0 0 1.63L7.4 8.54c.5.45 1.28.45 1.77 0a1.1 1.1 0 0 0 0-1.63L7.4 5.28zm13.94 15.1c-.88.86-1.59 1.93-1.59 3.12 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.43-.26c.35-.22.56-.58.56-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14zM26.67 5.28a1.33 1.33 0 0 0-1.77 0L23.14 6.9a1.1 1.1 0 0 0 0 1.63c.48.45 1.27.45 1.76 0l1.77-1.63a1.1 1.1 0 0 0 0-1.63zm3.08 8.41c.69 0 1.25.52 1.25 1.16 0 .63-.56 1.15-1.25 1.15h-2.5c-.69 0-1.25-.52-1.25-1.15 0-.64.56-1.16 1.25-1.16h2.5zM6 14.85c0-.64-.56-1.16-1.25-1.16h-2.5c-.69 0-1.25.52-1.25 1.16 0 .63.56 1.15 1.25 1.15h2.5C5.44 16 6 15.48 6 14.85z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <a onClick="toggle_theme('light')" class="button uno toggle-theme-light"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg" aria-label="light bulb turned on"><path d="M19.51 18.8a5.13 5.13 0 0 0 1.5-3.75c0-2.72-2.32-4.82-5-4.82-2.7 0-5 2.1-5 4.82 0 1.77.41 2.77 1.45 3.72 1.08.98 2.1 2.4 2.27 4.15h2.55a7.1 7.1 0 0 1 2.23-4.12zm1.83 1.57c-.88.87-1.59 1.94-1.59 3.13 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6.01c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.44-.26c.34-.22.55-.58.55-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <br>
+  <a onClick="reset_theme()" class="button uno toggle-theme-reset hidden-phone">Reset <noscript>(JS required)</noscript></a>
+</span>
+
+  <container width="content-width">
+    <article>
+      
+        <p>This is a tutorial for people who want to learn to program, and have absolutely
+no experience.</p>
+
+<p>We’re going to start off, however, not by talking about programming, but rather
+about one of the people responsible for popularizing it, and his… interesting
+skills. Here’s a video of Bill Gates jumping over a chair:</p>
+
+<iframe src="https://www.youtube.com/embed/8TCxE0bWQeQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width:100%; height: 400px" allowfullscreen=""></iframe>
+
+<p>And just how is this relevant? We’re going to start out our exploration of
+programming by making <em>Bill Gates Chair Jumper Simulator 2015</em>.</p>
+
+<h3 id="how-do-you-tell-your-game-what-to-do-commands">How do you tell your game what to do? Commands!</h3>
+
+<p>Before we start, let’s talk a little about how this whole game making thing is
+going to work. Despite how terrifying you might think it is, programming a game
+is actually like giving driving directions to someone new to the area: just a
+series of really specific English commands.</p>
+
+<p>See if you can put together a list of “directions” you’ll need to give the
+computer in order to make the chair jumping game. Here are two to get you
+started:</p>
+
+<ul>
+  <li>When the right arrow key is being pressed, move the character to the right</li>
+  <li>When Bill Gates touches a chair, restart the game</li>
+</ul>
+
+<p>Got your list? A lot of the job of programmers is just to translate all those
+commands from plain English into the version of English that computers
+understand (the “programming language”). Construct is one of those languages.</p>
+
+<h3 id="loading-up-construct">Loading Up Construct</h3>
+
+<p>Ok, let’s get started making our game. To get started, just launch Construct 3:
+<a href="https://editor.construct.net/">https://editor.construct.net/</a></p>
+
+<p>Once you’re signed up, let’s create a new project. Just give it a name, and
+leave everything else as default.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*BHDNzaUU_5VvHqFBgEvezQ.png" alt="" /></p>
+
+<p>FYI, you don’t need to create an account on Construct to use it. However, you DO
+need to have an account with Dropbox, OneDrive, or another online storage
+provider to save your game.</p>
+
+<p>When you actually start working on your game, you should save as soon as
+possible so you don’t accidentally lose your work.</p>
+
+<h3 id="the-world">The World</h3>
+
+<p>Let’s quickly break down some of the parts of Construct.</p>
+
+<p>The largest area with the big white space is the World Map. This is where we’re
+going to be designing our Chair Jumping obstacle course:</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-1-world-map.png" alt="" /></p>
+
+<h3 id="concepts-of-chairs">Concepts of Chairs</h3>
+
+<p>On the right side of the screen, you’ll also see an “Project” section. This is
+where we’re going to store our concepts of objects, so I’ll actually be
+referring to it as the Concepts section:</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-2-sidebar.png" alt="" /></p>
+
+<p>Note that I said concepts. If you look around you, you’ll see that, despite the
+fact that there are a bunch of chairs in various places, they all look and act
+the same. We only need to tell Construct what the concept of a chair looks like
+and acts like, and then we can create multiple <em>instances</em> of the chair in the
+real world. (Neat, that’ll save us a lot of time if we make a big world!)</p>
+
+<p>It’s worth mentioning: even if there’s only one of a thing in the world, it’ll
+still need to be created in the Concepts section. Let’s list some concepts
+you’ll need for this game:</p>
+
+<ul>
+  <li>Chair</li>
+  <li>Bill Gates (the player)</li>
+  <li>The Ground</li>
+</ul>
+
+<h3 id="properties">Properties</h3>
+
+<p>Finally, on the far left hand of the screen, you’ll see the Properties section:</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-3-properties.png" alt="" /></p>
+
+<p>We won’t need this right now, but you might eventually find that you’ll want to,
+say, change something about just one instance on the World Map. (For example,
+maybe one section of the ground should be slippery).</p>
+
+<p>You can select an instance in the World Map section, and then edit some things
+about it in the Properties section.</p>
+
+<h3 id="making-the-game">Making the Game</h3>
+
+<p>Okay, so let’s go ahead and get started with making our game. We’ll start by
+making some of the concepts we listed earlier.</p>
+
+<p>Right-click anywhere on the white part within the world map, and click “New”, then select “Sprite” (the
+little image of the space invader). Almost everything in our game will be a
+Sprite. Give the sprite a name (“Chair”), and hit Create.</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-4-insert.png" alt="" /></p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-5-sprite.png" alt="" /></p>
+
+<p>Click somewhere in the World Map to place the first instance of the chair. We
+can create more later by just dragging them from the Concepts section into the
+World Map section.</p>
+
+<p>It’ll open up an image editor where you can design your chair’s image. Paint
+your chair!</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-6-h.png" alt="" /></p>
+
+<p>When you’re done, hit the “Crop” button, which has an icon like this:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/0*iOq_pwoNPboILCxO.png" alt="" /></p>
+
+<p>(This will remove the transparent border from the sides of the chair, otherwise
+the air surrounding the chair will also be considered part of the chair!)</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-7-h-done.png" alt="" /></p>
+
+<p><strong>Go ahead and make two more concepts: one Sprite for Bill Gates (name it
+“BillGates”), and one Sprite for the ground (it can just be a black
+rectangle).</strong> When you’re done, lay out your starting level in the World Map so
+Bill and a chair are both above a platform.</p>
+
+<p>Now’s a good time to save your work! Construct 2 does not have an auto-save
+feature, so it’s important to save frequently. Hit Ctrl+S to save.</p>
+
+<h3 id="behaviors">Behaviors</h3>
+
+<p>We can run our game by clicking the “play” button at the very top-left of the
+Construct 3 window, but our game isn’t going to do much yet. We’ve told
+Construct 3 what our game looks like, but not how anything acts!</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*3PU0vT6dWk5gdd1GyH47mA.png" alt="" /></p>
+
+<p>There are two ways to tell Construct how the game acts. We’re going to talk
+about the second one much later, but for right now, we’ll learn about something
+called “Behaviors” — which, well, describes how things generally behave.</p>
+
+<p>Right click on the concept of Bill Gates (in the “Object Types” section, <strong>not</strong>
+in the World Map section) and click Behaviors. Add the following two behaviors
+by clicking on the “+” button and then the name of each:</p>
+
+<ul>
+  <li>“Platforming” (the little icon of the jumping guy) — tells Construct that our
+character can run and jump, and should fall to the ground.</li>
+  <li>“Scroll To” — tells Construct to make sure the camera follows our guy.</li>
+</ul>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-8-behavior.png" alt="" /></p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-9-behavior-window.png" alt="" /></p>
+
+<p>Great, let’s click that play button again and see how things go:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*9q215ArGWmG4vOI-JV20xw.gif" alt="" /></p>
+
+<p>Okay, <em>not great</em>, our guy falls through the ground!</p>
+
+<p>It looks like we need to tell Construct that the ground is solid. Add the
+behavior called “Solid” to the concept of the ground, and re-run the game:</p>
+
+<p><img src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/gamedev-10-ground-behaviors.png" alt="" /></p>
+
+<p>Great, it works!</p>
+
+<h3 id="the-event-sheet">The Event Sheet</h3>
+
+<p>The Event Sheet is the part of Construct which most professional programmers
+would really recognize as programming. In order to learn how to use it, though,
+we need to understand something, first: what’s an event?</p>
+
+<p>So what is an event? Well, I listed two of them back in the “Commands” section:</p>
+
+<ul>
+  <li>When the right arrow key is being pressed…</li>
+  <li>When Bill Gates touches a chair…</li>
+</ul>
+
+<p>If I create an event in the Event Sheet for “When Bill Gates touches a chair…”,
+the computer will start looking for that to happen on the screen. Any time it
+does, it’s going to execute whatever actions I tell it to. Let’s go ahead and
+create that event now (instead of “touches”, Construct 2 uses “On collision with
+another object”):</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*IGJlmFVzl4NT4ODhKsvgWA.gif" alt="" /></p>
+
+<p>And, let’s add an action to that event to tell the System to restart the level.
+Go to System, and then select Restart Layout.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*1OnDnDKjgcNrIm-IbNW3Lw.gif" alt="" /></p>
+
+<p>It’s not the most fun thing in the world, but it is a game!</p>
+
+<h3 id="be-creative">Be Creative</h3>
+
+<p>Now that you know the basics, it’s time for you to be creative! Lay out your
+level however you want! Add more chairs, new enemies, etc.</p>
+
+<p>This game is a great start, but it’s not the only game you can make. Feel free
+to start completely from scratch so you can customize your game to your liking.
+(For example, want to make a top-down game? Choose the “8-direction” behavior
+instead of Platformer.)</p>
+
+<p>FYI — the free version has some limits. You’ll get higher limits for creating a
+free account.</p>
+
+<blockquote>
+  <p>If you’re atttending CodeDay and still hitting the limits, just post a message on
+chat.srnd.org in #helpdesk and we’ll get you login information for one of our
+accounts.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="about-srnd">About SRND</h3>
+
+<p>Increasing Computer Science enrollment nationwide. <a href="https://srnd.org/" class="uno">srnd.org</a></p>
+
+      
+    </article>
+  </container>
+</section>
+<section id="plug">
+  <container width="content-width">
+    <hr>
+    <h3>About Me</h3>
+    <img src="/media/avatar.png" alt="Photo of Melody!" width="100" height="100" title="Melody's profile picture!" style="float: left; margin-right: 1ch"/>
+    <p>
+      Hi I'm Rashmika (Scarlet), a web developer, hacker, CTF player, penetration tester and much more, currently studying in Bachelor of Technology at one of the prestigious colleges of India, National Institute of Technology, Warangal. You can find me at <a class="uno" href="https://urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="12" width="12" /> @here </a>.
+    </p>
+    <br>
+    <h3>Tags &amp; Sharing</h3>
+    <p>
+      <a href="/hashtag/guides" class="button uno" >#guides</a>
+      <br>
+      <a id="share-mastodon" href="#share-mastodon" onclick="share_on_mastodon('Build your first game', 'https://melody.dev/construct/', '#guides ')" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-mastodon-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-mastodon-fff.svg" class="visible-theme-dark" height="14" width="14" /> Mastodon <noscript>(Please enable Javascript)</noscript></a>
+      <a id="share-twitter" href="http://twitter.com/share?text=Build your first game&url=https://melody.dev/construct/&via=rashmika&hashtags=guides," target="_blank" rel="noreferrer" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="14" width="14" /> Twitter</a>
+      <a id="edit-github" href="https://github.com/pixelyunicorn/melody.dev/blob/glitch/_posts/2015-11-03-construct/2015-11-03-construct.md" target="_blank" rel="noreferrer" class="button uno" ><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-fff.svg" class="visible-theme-dark" height="14" width="14" /> View on GitHub</a>
+      <a id="edit-glitch" href="https://glitch.com/edit/#!/melody?path=_posts/2015-11-03-construct/2015-11-03-construct.md:1:0" target="_blank" rel="noreferrer" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-day.svg" class="visible-theme-light" height="14" width="18"/><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-night.svg" class="visible-theme-dark" height="14" width="18"/> Remix on Glitch</a>
+    </p>
+    <blockquote id="patreon-beg">
+  <h3>Support my work!</h3>
+  <p>
+    I do a lot of things: I write, draw, code, hack, pentest, stream, and also drink a lot of coffee. I would love to keep doing what I love to do, but these things take time in energy. That's where you come in. By supporting what I do, I have less to worry about so I can go back to doing what I love 💖
+    <br><br>
+    <a class="button" href="https://ko-fi.com/yourid" target="_blank" rel="noreferrer" style="color:currentColor"><img role="presentation" src="https://ko-fi.com/favicon.png" height="16" width="16" /> <strong>Buy me a Taco!</strong></a>
+    <a class="button" onclick="hide_patreon()">Remind me later <noscript>(JS required)</noscript></a>
+  </p>
+</blockquote>
+
+    <h3>More Posts</h3>
+    <p class="page-nav">
+      
+      
+        <a class="next uno button" href="/temple/">Temple University →</a>
+      
+    </p>
+  </container>
+</section>
+
+    <script>if(navigator.doNotTrack != 1 && document.title != "four-hundred-and-four") { document.write('<img src="https://sapphic-squid-adalytics.glitch.me/counter.png?fallback=rashmika.me&color=black" alt="" style="vertical-align: bottom;" width="1" height="1" aria-hidden="true" />'); }</script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Let's Talk Transit Cards!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://cdn.glitch.com/cac749b9-a651-4b28-900e-eab82ca322d7/squiddo.png?1551146813375">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- general seo -->
+    <meta name="description" content="Here’s a talk I gave at Transit Techies NYC #10 about some of the cool things I am working on in the realm of transit. 💳📲">
+
+    <!-- zuckerberg card -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Let's Talk Transit Cards!">
+    <meta property="og:description" content="Here’s a talk I gave at Transit Techies NYC #10 about some of the cool things I am working on in the realm of transit. 💳📲">
+    <meta property="og:url" content="https://melody.dev/transit-cards/">
+    
+    <meta property="og:image" content="https://melody.dev/transit-cards/meta-preview.png">
+    
+    <meta property="og:article:author" content="Rashmika Kolleri">
+    <meta property="og:article:published_time" content="2019-09-04 00:00:00 +0530">
+    
+
+    <!-- @jack card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pixelyunicorn">
+    <meta name="twitter:creator" content="@pixelyunicorn">
+    <meta name="twitter:title" content="Let's Talk Transit Cards!">
+    <meta name="twitter:description" content="Here’s a talk I gave at Transit Techies NYC #10 about some of the cool things I am working on in the realm of transit. 💳📲">
+    
+    <meta name="twitter:image:src" content="https://melody.dev/transit-cards/meta-preview.png">
+    <meta name="twitter:image:alt" content="Let's Talk Transit Cards!">
+    
+  </head>
+  <body class="page-transit-cards accent-teal ">
+    <span id="top"></span>
+<nav>
+  <container>
+    <a href="/" class="button duo"><svg fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" xmlns="http://www.w3.org/2000/svg" aria-label="purse-fill" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="22" height="22" title="purse-fill"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M16 11.5c-.711 0-1.377.007-2 .024-8.208.213-9 1.935-9 7.976s.792 7.764 9 7.976c.623.017 1.289.024 2 .024 10.083 0 11-1.5 11-8s-.917-8-11-8zm-.018 5.88c1.299-1.28 2.597-.96 3.247-.32 2.597 2.56-2.45 5.94-3.247 5.94-.796 0-5.843-3.38-3.246-5.94.65-.64 1.948-.96 3.246.32z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5a5 5 0 0 0-5 5v2a1 1 0 1 0 2 0v-2a3 3 0 0 1 6 0v2a1 1 0 1 0 2 0v-2a5 5 0 0 0-5-5z"></path></g></svg> Rashmika</a>
+  </container>
+</nav>
+
+<header class="bg-teal ">
+    <span id="top"></span>
+    
+    <div class="feature hidden-tablet">
+      <img src="/transit-cards/feature.svg" role="presentation"/>
+      <tiles style="
+          grid-template-columns: repeat(16, 1fr);
+          grid-template-rows: repeat(10, 1fr);
+          ">
+        <tile style="
+          grid-column: 6 / span 6;
+          grid-row: 3 / span 6;
+        ">
+          <h1>Let's Talk Transit Cards!</h1>
+        </tile>
+      </tiles>
+      <p class="metadata feature-above">
+        
+        Published September 4, 2019 •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  5 mins
+</span>
+ read
+      </p>
+    </div>
+    <div class="visible-tablet">
+      <br class="hidden-phone">
+      <h1>Let's Talk Transit Cards!</h1>
+      <p class="metadata">
+        
+        Published September 4, 2019 •
+        
+        
+<span class="reading-time" title="Estimated read time">
+  5 mins
+</span>
+ read
+      </p>
+      <img src="/transit-cards/feature.svg" alt="Let's Talk Transit Cards!"/>
+    </div>
+    
+</header>
+<section id="main">
+  <span class="toggle-themes hidden-phone hidden-tablet">
+  <a onClick="toggle_theme('dark')" class="button uno toggle-theme-dark"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M14.75 2.15c0-.63.56-1.15 1.25-1.15.7 0 1.25.52 1.25 1.15v2.31c0 .64-.56 1.16-1.25 1.16s-1.25-.52-1.25-1.16v-2.3zM7.4 5.28a1.33 1.33 0 0 0-1.77 0 1.1 1.1 0 0 0 0 1.63L7.4 8.54c.5.45 1.28.45 1.77 0a1.1 1.1 0 0 0 0-1.63L7.4 5.28zm13.94 15.1c-.88.86-1.59 1.93-1.59 3.12 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.43-.26c.35-.22.56-.58.56-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14zM26.67 5.28a1.33 1.33 0 0 0-1.77 0L23.14 6.9a1.1 1.1 0 0 0 0 1.63c.48.45 1.27.45 1.76 0l1.77-1.63a1.1 1.1 0 0 0 0-1.63zm3.08 8.41c.69 0 1.25.52 1.25 1.16 0 .63-.56 1.15-1.25 1.15h-2.5c-.69 0-1.25-.52-1.25-1.15 0-.64.56-1.16 1.25-1.16h2.5zM6 14.85c0-.64-.56-1.16-1.25-1.16h-2.5c-.69 0-1.25.52-1.25 1.16 0 .63.56 1.15 1.25 1.15h2.5C5.44 16 6 15.48 6 14.85z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <a onClick="toggle_theme('light')" class="button uno toggle-theme-light"><svg width="20" height="20" viewBox="2 2 28 28" xmlns="http://www.w3.org/2000/svg" aria-label="light bulb turned on"><path d="M19.51 18.8a5.13 5.13 0 0 0 1.5-3.75c0-2.72-2.32-4.82-5-4.82-2.7 0-5 2.1-5 4.82 0 1.77.41 2.77 1.45 3.72 1.08.98 2.1 2.4 2.27 4.15h2.55a7.1 7.1 0 0 1 2.23-4.12zm1.83 1.57c-.88.87-1.59 1.94-1.59 3.13 0 .95-.84 1.73-1.88 1.73H14.2c-1.07 0-1.94-.8-1.94-1.79 0-1.16-.65-2.21-1.55-3.03-1.62-1.49-2.2-3.12-2.2-5.36 0-3.94 3.36-7.13 7.5-7.13 4.14 0 7.5 3.2 7.5 7.13 0 2.12-.78 3.96-2.16 5.32zm-4.38 6.01c.94 0 .97.15.05.38l-4.3 1.1c-.24.05-.46-.1-.46-.32 0-.25.09-.49.24-.68a.85.85 0 0 1 .47-.26l.7-.18c.11-.02.22-.04.33-.04h2.97zm-4.7 2.93c.03.44.59.6 1.05.48l5.76-1.43c.4-.1.68-.43.68-.82 0-.3-.36-.45-.68-.37l-6.43 1.59a.5.5 0 0 0-.39.55zM16.64 31c.1 0 .22-.01.32-.04l1.42-.35c.13-.03.26-.09.37-.16l.44-.26c.34-.22.55-.58.55-.96 0-.08-.08-.13-.16-.11l-5.73 1.42c-.14.03-.16.2-.05.27.2.12.45.19.7.19h2.14z" fill="currentColor" fill-rule="evenodd"/></svg>
+ <span class="hidden-phone">Change Theme <noscript>(JS required)</noscript></span></a>
+  <br>
+  <a onClick="reset_theme()" class="button uno toggle-theme-reset hidden-phone">Reset <noscript>(JS required)</noscript></a>
+</span>
+
+  <container width="content-width">
+    <article>
+      
+        <p>Here’s a talk I gave at <strong>Transit Techies NYC #10</strong> about some of the cool things I am working on in the realm of transit. 💳📲</p>
+
+<p>I couldn’t decided what I wanted to speak about, so I covered 3 topics: youth advocacy, the story of philly’s cards, and how anything can be a transit card!</p>
+
+<script async="" class="speakerdeck-embed" data-id="731f1eaf7eb249029e4ddcb9d553f1cc" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+<h2 id="links--resources">Links &amp; Resources</h2>
+
+<ul>
+  <li><a href="https://speakerdeck.com/pixely/lets-talk-transit-cards">Slides on speakerdeck</a></li>
+  <li><a href="https://twitter.com/septayac">SEPTA YAC Twitter</a> and <a href="https://septayac.com">SEPTA YAC website</a></li>
+  <li><a href="https://septakey.org/">SEPTA Key website</a></li>
+  <li><a href="https://whyy.org/articles/septa-awards-1295-million-contract-build-new-fare-system/">WHYY article about original contract award</a></li>
+  <li><a href="https://sfist.com/2019/03/28/local-genius-turned-her-clipper-card-into-a-piece-of-jewelry/">SFist article about clipper card ring</a></li>
+  <li><a href="http://www.ringtheory.com">Ring Theory</a></li>
+</ul>
+
+<hr />
+
+<h2 id="draft-text-version-w-image-descriptions">(DRAFT) Text version w/ image descriptions</h2>
+
+<blockquote>
+  <p>Heya! I am still working on putting this section together, but in the meantime you can find my progress below:</p>
+</blockquote>
+
+<h3 id="part-0-youth-advocacy">Part 0: Youth Advocacy</h3>
+
+<p>I’m a member of the SEPTA Youth Advisory Council, where I advocate for better technologies and equitable access to transit on behalf of youth between the ages ages of 16-24.</p>
+
+<p>(I recently drew the broad street subway as a shocked pikachu pin this is what happens after a big game lets out!)</p>
+
+<p>For me, youth advocacy involves help with outreach events…</p>
+
+<p>…post memes every now and then…</p>
+
+<p>…help with outreach events…</p>
+
+<p>…and design maps. lots and lots of maps! Like the time the philly subway was cast as the 7 train for 21 bridges, which has me thinking, what if the 7 train was extended all the way down to philly?</p>
+
+<h3 id="part-1-key-card">Part 1: Key Card</h3>
+
+<p>This is a key card. It’s was promised to Philadelphians as “the future of fare payment,” but is that really the case? Let’s find out!</p>
+
+<p>I did not get clearance to put the key card in the slides, so i illustrated a mascot for it instead! Meet Robin! (I may or may not have stolen this idea from a british bank.)</p>
+
+<p>The Key Card was meant to replace this thing called tokens. It has been phased out in many cities in America, but Philly still had them well into this decade (although they are no longer sold as of this year, tokens are still in use today!)</p>
+
+<p>Here’s a mural that went up to immortalizes the token as a very important of philly culture.</p>
+
+<p>But here’s the thing about the key card: no one really likes it</p>
+
+<p>It’s slow and not as the seamless system.</p>
+
+<p>It’s also nearly 6 years behind schedule (and counting!)</p>
+
+<p>But like all trains in life, there’s light at the end off the tunnel.</p>
+
+<p>How did it be this way? Let’s go back to 2011, back when Justin Bieber was my jam! (Somewhere in my closet there I have some signed justin bieber drumsticks, and I’m not sure if I should be ashamed of myself or not)</p>
+
+<p>Planking was a big thing</p>
+
+<p>But more importantly, it was the year Nyan Cat came out, and cute culture went mainstream!</p>
+
+<p>2011 was also when SEPTA signed a contract with this company called ACS.</p>
+
+<p>Back when the contract was signed, the system promised 3 things:</p>
+
+<ol>
+  <li>a rollout by the end of 2013</li>
+  <li>a seamless multimodal fare system</li>
+  <li>an system where you can pay with a cell phone or contactless credit card</li>
+</ol>
+
+<p>Let’s check out the first point. Here is the original timeline from the initial contract, which promises a full rollout by 2014.</p>
+
+<p>Now, let’s compress that original timeline…</p>
+
+<p>…and let’s throw in a mix of reality in there! By 2014, they only started to install the hardware, and it’s 2019 and they haven’t even finished rolling it out yet!</p>
+
+<p>But what doesn’t help is the project changing hands multiple times. Sometime between when the contract was signed, ACS was folded into Xerox’s gee. With every organization restructure comes lapses in communication. Also, the eagles won the super bowl in 2018!</p>
+
+<p>But this project stretched out for so long that about 40,000 key cards expired in July, and they haven’t even finished rolling it out yet!</p>
+
+<p>Let’s jump to second point of promises: a seamless fare collection system.</p>
+
+<p>When the kiosks first rolled out, the user interface was slow and confusing. For one, people kept getting new key cards when they meant to reload their card.</p>
+
+<p>I am guilty of this too!</p>
+
+<p>They have since redesigned the kiosk to make it clear that you need to tap you card on the reader to reload a card. Yay progress!</p>
+
+<p>There are a few gripes I have against these kiosks, like for example only US cards are accepted putting international travelers outta luck. There’s also no way to get a key card from the airport or even reload it, making the system useless for tourists until they get into the city. They also sell one-use tickets, but for some reason they can’t be used on busses.</p>
+
+<p>There’s also the mess that’s the website. Look at it! The check boxes are actually links, the terminology is confusing, worse.</p>
+
+<p>At launch, the site on mobile is also a hot mess because it doesn’t exist. For a site launched in 2016 there’s literally no excuses for htis.</p>
+
+<p>The good news many of the issues with the original site have all been fixed! To my disbelief, the same contractor that built old site also built the new site. Why didn’t they get it right the first time around? (They world may never know!)</p>
+
+<p>More recently, the key card has been integrated into the new SEPTA mobile app.</p>
+
+<p>That’s progress! As my favorite former SEPTA slogan says, “We’re Getting There.”</p>
+
+<p>So about the jawn about being able to with a contactless credit card or cell phone…</p>
+
+<p>…your only option right now and for the current foreseeable future is paying a small fee to use a branded card.</p>
+
+<p>TK</p>
+
+<h3 id="part-2-everything-is-a-transit-card">Part 2: Everything is a Transit Card</h3>
+
+<p>TK</p>
+
+      
+    </article>
+  </container>
+</section>
+<section id="plug">
+  <container width="content-width">
+    <hr>
+    <h3>About Me</h3>
+    <img src="/media/avatar.png" alt="Photo of Melody!" width="100" height="100" title="Melody's profile picture!" style="float: left; margin-right: 1ch"/>
+    <p>
+      Hi I'm Rashmika (Scarlet), a web developer, hacker, CTF player, penetration tester and much more, currently studying in Bachelor of Technology at one of the prestigious colleges of India, National Institute of Technology, Warangal. You can find me at <a class="uno" href="https://urid" target="_blank" rel="noreferrer"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="12" width="12" /> @here </a>.
+    </p>
+    <br>
+    <h3>Tags &amp; Sharing</h3>
+    <p>
+      <a href="/hashtag/talks" class="button uno" >#talks</a><a href="/hashtag/design" class="button uno" >#design</a><a href="/hashtag/transit" class="button uno" >#transit</a>
+      <br>
+      <a id="share-mastodon" href="#share-mastodon" onclick="share_on_mastodon('Let's Talk Transit Cards!', 'https://melody.dev/transit-cards/', '#talks #design #transit ')" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-mastodon-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-mastodon-fff.svg" class="visible-theme-dark" height="14" width="14" /> Mastodon <noscript>(Please enable Javascript)</noscript></a>
+      <a id="share-twitter" href="http://twitter.com/share?text=Let's Talk Transit Cards!&url=https://melody.dev/transit-cards/&via=rashmika&hashtags=talks,design,transit," target="_blank" rel="noreferrer" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-twitter.svg" height="14" width="14" /> Twitter</a>
+      <a id="edit-github" href="https://github.com/pixelyunicorn/melody.dev/blob/glitch/_posts/2019-09-04-transit-cards/2019-09-04-transit-cards.md" target="_blank" rel="noreferrer" class="button uno" ><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-000.svg" class="visible-theme-light" height="14" width="14" /><img role="presentation" src="https://cdn.glitch.com/2d246102-8341-4166-a220-b39d607c9218/icon-github-fff.svg" class="visible-theme-dark" height="14" width="14" /> View on GitHub</a>
+      <a id="edit-glitch" href="https://glitch.com/edit/#!/melody?path=_posts/2019-09-04-transit-cards/2019-09-04-transit-cards.md:1:0" target="_blank" rel="noreferrer" class="button uno"><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-day.svg" class="visible-theme-light" height="14" width="18"/><img role="presentation" src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13/logo-night.svg" class="visible-theme-dark" height="14" width="18"/> Remix on Glitch</a>
+    </p>
+    <blockquote id="patreon-beg">
+  <h3>Support my work!</h3>
+  <p>
+    I do a lot of things: I write, draw, code, hack, pentest, stream, and also drink a lot of coffee. I would love to keep doing what I love to do, but these things take time in energy. That's where you come in. By supporting what I do, I have less to worry about so I can go back to doing what I love 💖
+    <br><br>
+    <a class="button" href="https://ko-fi.com/yourid" target="_blank" rel="noreferrer" style="color:currentColor"><img role="presentation" src="https://ko-fi.com/favicon.png" height="16" width="16" /> <strong>Buy me a Taco!</strong></a>
+    <a class="button" onclick="hide_patreon()">Remind me later <noscript>(JS required)</noscript></a>
+  </p>
+</blockquote>
+
+    <h3>More Posts</h3>
+    <p class="page-nav">
+      
+        <a class="prev uno button" href="/alex-hillman/">← Alex Hillman</a>
+      
+      
+        <a class="next uno button" href="/queerjs/">TacoJS & QueerJS →</a>
+      
+    </p>
+  </container>
+</section>
+
+    <script>if(navigator.doNotTrack != 1 && document.title != "four-hundred-and-four") { document.write('<img src="https://sapphic-squid-adalytics.glitch.me/counter.png?fallback=rashmika.me&color=black" alt="" style="vertical-align: bottom;" width="1" height="1" aria-hidden="true" />'); }</script>
+  </body>
+</html>
